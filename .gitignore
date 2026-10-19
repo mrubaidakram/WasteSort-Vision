@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+data/
+artifacts/*.pt
+artifacts/*.pth
+artifacts/*.json
+artifacts/*.jsonl
+!artifacts/README.md

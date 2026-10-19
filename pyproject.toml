@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wastesort-vision"
+version = "0.1.0"
+description = "Reproducible waste image classification with PyTorch and TrashNet."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+  "Pillow>=10.0",
+  "torch>=2.2",
+  "torchvision>=0.17",
+]
+
+[project.scripts]
+wastesort-train = "wastesort_vision.train:main"
+wastesort-predict = "wastesort_vision.predict:main"
+wastesort-evaluate = "wastesort_vision.evaluate:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
